@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [],
+    "deny": [],
+    "bypassPermissions": true
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File \"C:\\Users\\81909\\backup-before-edit.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}
